@@ -1,0 +1,10 @@
+*{
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: Space Grotesk;
+  background-color: #1E1F31;
+  overflow-x: hidden;
+}
