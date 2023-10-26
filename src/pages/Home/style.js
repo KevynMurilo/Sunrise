@@ -5,6 +5,10 @@ import WaveBack from '../../assets/wave.svg';
 export const Container = styled.div`
     margin-left: 80px;
     margin-right: 80px;
+
+    @media (max-width: 768px) {
+        margin: 0 20px 0 20px;
+}
 `;
 
 export const ContainerNavBar = styled.div`
@@ -17,8 +21,12 @@ export const ContainerNavBar = styled.div`
 
 
 export const TitleLogo = styled.h1`
-    font-size: 80px;
+    font-size: 4vw;
     color: #fff;
+
+    @media (max-width: 768px) {
+        font-size: 9vw;
+}
 `;
 
 export const ContainerIconsLinks = styled.ul`
@@ -43,6 +51,10 @@ export const Links = styled.li`
     display: inline-block;
     position: relative;
 
+    @media (max-width: 768px) {
+        margin: 10px;
+}
+
     &:hover {
         &::after {
             content: '';
@@ -55,11 +67,15 @@ export const Links = styled.li`
             animation: ${slideIn} 0.3s forwards;
         }
     }
+    
 `;
 
 
 export const ImgLink = styled.img`
-    width: 50px;
+    width: 2vw;
+    @media (max-width: 768px) {
+        width: 8vw;
+}
 `;
 
 
@@ -67,33 +83,48 @@ export const Content = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     padding: 50px 100px 0; 
+
+    @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 50px 0; 
+}
 `;
 
 
 export const ContainerText = styled.div`
-    width: 50%;
-    padding-right: 150px;
-    margin-top: 100px;
+    width: 100%;
+    max-width: 50%; 
+    @media (max-width: 768px) {
+    width: 100%;
+    max-width: 100%;
+}
+
+`;
+
+export const Text = styled.h1`
+    font-size: 3vh;
+    line-height: 5vh;
+    color: #fff;
 `;
 
 export const Span = styled.span`
     color: #f09053;
 `;
 
-export const Text = styled.h1`
-    font-size: 28px;
-    line-height: 46px;
-    color: #fff;
-
-`;
 
 export const ContainerAnimations = styled.div`
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 40%; 
+    max-width: 500px; 
+    aspect-ratio: 1 / 1; 
     background: radial-gradient(520px, #f08f538c, transparent 50%);
-    margin-top: 50px;
+    margin-top: 3%; 
+    border-radius: 50%;
+    @media (max-width: 768px) {
+        margin-top: 50px;
+}
 `;
 
 const rotation = keyframes`
@@ -112,11 +143,12 @@ export const ImgIconPrincipal = styled.img`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 200px;
+    width: 50%;
     border-radius: 50%;
 `;
 
 export const ImgIcons = styled.img`
+    width: 15%;
     position: absolute;
     &:nth-child(1) {
         top: 0;
@@ -139,6 +171,7 @@ export const ImgIcons = styled.img`
         left: 80%;
     }
 `;
+
 const waveOne = keyframes`
     50% {
         background-position: 0 0;
@@ -146,10 +179,10 @@ const waveOne = keyframes`
 `;
 
 export const Wave = styled.div`
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     line-height: 0;
     
     &::before {
@@ -157,7 +190,7 @@ export const Wave = styled.div`
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 100%;
+        width: 100vw;
         height: 100%;
         background: url(${WaveBack}) repeat-x;
         background-size: cover;
@@ -165,6 +198,10 @@ export const Wave = styled.div`
         opacity: 0.2;
         animation: ${waveOne} 60s linear infinite;
     }
+
+    @media (max-width: 768px) {
+    width: 100vw;
+}
 `;
 
 
@@ -174,4 +211,5 @@ export const ImgWave = styled.img`
     bottom: 0;
     left: 0;
     line-height: 0;
+    
 `;
