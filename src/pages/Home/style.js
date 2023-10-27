@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
-
 import WaveBack from '../../assets/wave.svg';
+
 
 export const Container = styled.div`
     margin-left: 80px;
@@ -49,7 +49,7 @@ export const Links = styled.li`
     text-decoration: none;
     list-style: none;
     display: inline-block;
-    position: relative;
+    position: relative;   
 
     @media (max-width: 768px) {
         margin: 10px;
@@ -72,7 +72,7 @@ export const Links = styled.li`
 
 
 export const ImgLink = styled.img`
-    width: 2vw;
+    width: 2.6vw;
     @media (max-width: 768px) {
         width: 8vw;
 }
@@ -84,7 +84,7 @@ export const Content = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 100px 0; 
+    padding: 0 100px 0; 
 
     @media (max-width: 768px) {
     flex-direction: column;
@@ -104,9 +104,16 @@ export const ContainerText = styled.div`
 `;
 
 export const Text = styled.h1`
-    font-size: 3vh;
+    font-size: 1.5vw;
     line-height: 5vh;
     color: #fff;
+    text-align: justify;
+
+    @media (max-width: 768px) {
+    font-size: 2.5vh;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+}  
 `;
 
 export const Span = styled.span`
@@ -117,13 +124,15 @@ export const Span = styled.span`
 export const ContainerAnimations = styled.div`
     position: relative;
     width: 40%; 
-    max-width: 500px; 
+    max-width: 400px; 
     aspect-ratio: 1 / 1; 
     background: radial-gradient(520px, #f08f538c, transparent 50%);
-    margin-top: 3%; 
+    margin-top: 5%; 
     border-radius: 50%;
     @media (max-width: 768px) {
-        margin-top: 50px;
+        width: 50%;
+        margin-top: 5%;
+        z-index: 999;
 }
 `;
 
@@ -169,6 +178,10 @@ export const ImgIcons = styled.img`
     &:nth-child(5) {
         top: 70%;
         left: 80%;
+    }
+    &:nth-child(6) {
+        top: 90%;
+        right: 42%;
     }
 `;
 
