@@ -61,11 +61,11 @@ export default function Home(){
 
                 <ContainerAnimations>
                     <SocialIcons>
-                        <ImgIcons style={{width: 80}} src={FuteboldeAreia} alt="Social1"/>
-                        <ImgIcons style={{width: 80}} src={BeachTenis} alt="Social2"/>
-                        <ImgIcons style={{width: 80}} src={Volei} alt="Social3"/>
-                        <ImgIcons style={{width: 80}} src={Peteca} alt="Social4"/>
-                        <ImgIcons style={{width: 80}} src={Frisbee} alt="Social5"/>
+                        <ImgIcons src={FuteboldeAreia} alt="Social1"/>
+                        <ImgIcons src={BeachTenis} alt="Social2"/>
+                        <ImgIcons src={Volei} alt="Social3"/>
+                        <ImgIcons src={Peteca} alt="Social4"/>
+                        <ImgIcons src={Frisbee} alt="Social5"/>
                     </SocialIcons>
                     <ImgIconPrincipal src={IconBase} alt="EmailIcon"/>
 
