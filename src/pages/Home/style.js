@@ -16,6 +16,11 @@ export const ContainerNavBar = styled.div`
     justify-content: space-between;
     width: 100%;
     margin-top: 20px;
+    
+    @media (max-width: 768px) {
+        justify-content: flex-end;
+        margin-top: 10%;
+}
 
 `;
 
@@ -26,6 +31,7 @@ export const TitleLogo = styled.h1`
 
     @media (max-width: 768px) {
         font-size: 9vw;
+        display: none;
 }
 `;
 
@@ -33,6 +39,7 @@ export const ContainerIconsLinks = styled.ul`
     display: flex;
     justify-content: center;
     align-items: center;
+    
 `;
 
 const slideIn = keyframes`
@@ -94,11 +101,17 @@ export const Content = styled.div`
 
 
 export const ContainerText = styled.div`
+    display: flex;
     width: 100%;
-    max-width: 50%; 
+    max-width: 50%;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
     @media (max-width: 768px) {
     width: 100%;
     max-width: 100%;
+    margin: 0;
 }
 
 `;
@@ -120,6 +133,28 @@ export const Span = styled.span`
     color: #f09053;
 `;
 
+export const Button = styled.button`
+    margin-top: 5%;
+    width: 22vh;
+    height: 8vh;
+    border-radius: 20px;
+    background-color: #f09053;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 3.5vh;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    @media (max-width: 768px){
+        margin-top: 10%;
+    }
+
+    &:hover {
+        background-color: #d66537; 
+    }
+`; 
+
 
 export const ContainerAnimations = styled.div`
     position: relative;
@@ -130,9 +165,13 @@ export const ContainerAnimations = styled.div`
     margin-top: 5%; 
     border-radius: 50%;
     @media (max-width: 768px) {
-        width: 50%;
+        width: 20%;
         margin-top: 5%;
         z-index: 999;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 20px;
 }
 `;
 
