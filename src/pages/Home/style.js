@@ -60,6 +60,7 @@ export const Links = styled.li`
 
     @media (max-width: 768px) {
         margin: 10px;
+        margin-left: 25px;
 }
 
     &:hover {
@@ -92,6 +93,7 @@ export const Content = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 0 100px 0; 
+    margin-top: 3%;
 
     @media (max-width: 768px) {
     flex-direction: column;
