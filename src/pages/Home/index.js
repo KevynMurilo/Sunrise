@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { 
     Container,
     ContainerNavBar,
@@ -20,6 +20,8 @@ import {
 
 
 } from "./style";
+import VideoPlayer from "../../components/VideoPlayer";
+
 
 import IconInsta from '../../assets/instagram.svg'
 import IconWpp from '../../assets/wpp.svg'
@@ -38,19 +40,30 @@ import ImageBottom from '../../assets/wave.svg'
 
 
 export default function Home(){
+    const [showPlayer, setShowPlayer] = useState(false);
+    const videoUrl = 'https://youtube.com/shorts/NCkM8jGUov8?feature=share'; 
+
+    const handleClick = () => {
+        setShowPlayer(true);
+    };
+
+    const handleCloseClick = () => {
+        setShowPlayer(false);
+    };
+
     return(
         <Container>
             <ContainerNavBar>
                 <TitleLogo>SunRise</TitleLogo>
 
                 <ContainerIconsLinks>
-                    <a href="">
+                    <a href="https://www.instagram.com/sunriseesportesdeareia/">
                     <Links><ImgLink src={IconInsta}/></Links>
                     </a>
-                    <a href="">
+                    <a href="https://api.whatsapp.com/send/?phone=5561999952832&text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+a+arena.&type=phone_number&app_absent=0">
                     <Links><ImgLink src={IconWpp}/></Links>
                     </a>
-                    <a href="">
+                    <a href="https://www.google.com/maps/dir/-15.5440504,-47.3217262/Sunrise+Esportes+de+Areia/@-15.5515786,-47.3359572,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x9350a3e625cdc391:0x10d172548739dcc5!2m2!1d-47.3280639!2d-15.5592403?entry=ttu">
                     <Links><ImgLink src={IconLocalization}/></Links>
                     </a>
                 </ContainerIconsLinks>
@@ -58,8 +71,9 @@ export default function Home(){
 
             <Content>
                 <ContainerText>
-                        <Text>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in <Span>laying out print</Span>, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.</Text>
-                        <Button>PLAY</Button>
+                        <Text>Nossa arena oferece uma <Span>experiência única para todos os amantes do esporte.</Span> Com instalações de alta qualidade e uma atmosfera vibrante, proporcionamos o cenário perfeito para jogar, aprender e se divertir.</Text>
+                        <Button onClick={handleClick}>PLAY</Button>
+                        {showPlayer && <VideoPlayer url={videoUrl} onClose={handleCloseClick} />} 
                 </ContainerText>
 
                 <ContainerAnimations>
